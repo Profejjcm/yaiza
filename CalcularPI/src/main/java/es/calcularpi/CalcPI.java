@@ -14,10 +14,10 @@ import java.math.MathContext;
 public class CalcPI {
 
      public static void main(String[] args) {
-        MathContext mc = new MathContext(10);         
+        MathContext mc = new MathContent(NUM_DIG);         
         //meter en el método compute
         BigDecimal pi = new BigDecimal(0);
-        BigDecimal limit = new BigDecimal(1).movePointLeft(10);
+        BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
         for (int k = 0; !stop; k++) {
             BigDecimal piK = piFunction(k, mc);             
@@ -29,6 +29,7 @@ public class CalcPI {
         System.out.println(pi.round(mc));
        //
     }
+    public static final int NUM_DIG = 10;
 
     public static BigDecimal piFunction(int k, MathContext mc) {
         //meter en el método piFunction
