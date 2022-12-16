@@ -15,7 +15,12 @@ public class CalcPI {
 
      public static void main(String[] args) {
         MathContext mc = new MathContext(NUM_DIG);   //click derecho al 10, refactor, introduce, contant y cambiamos el nombre      
+        Compute(mc);
+    }
+
+    public static void Compute(MathContext mc) {
         //meter en el método compute
+        //click derecho el codigo, refactor, introduce, method, y ponemos el nombre
         BigDecimal pi = new BigDecimal(0);
         BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
